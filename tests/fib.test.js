@@ -1,4 +1,4 @@
-const fib = require("./fib") 
+const fib = require("../src/fib") 
 
 // Usage: test('description', testFunction)
 test('fib(1) = 1', () => {
