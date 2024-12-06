@@ -3,6 +3,5 @@ services:
     build: .
     tty: true
     volumes:
-      - ./src:/dynamic-programming/src
-      - ./tests:/dynamic-programming/tests
-      - ./package.json://dynamic-programming/package.json
+      - ./src:/home/node/dynamic-programming/src
+      - ./tests:/home/node/dynamic-programming/tests
