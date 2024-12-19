@@ -21,7 +21,7 @@ npm test
 
 -   [x] 1. fib memoization
 -   [x] 2. gridTraveller memoization
--   [ ] 3. canSum memoization
+-   [x] 3. canSum memoization
 -   [ ] 4. howSum memoization
 -   [ ] 5. bestSum memoization
 -   [ ] 6. canConstruct memoization
