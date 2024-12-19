@@ -28,7 +28,7 @@ const fibMem = (n: number, mem: { [idx: number]: number } = {}): number => {
 	if (n in mem) return mem[n];
 	if (n == 0) return 0;
 	if (n <= 2) return 1;
-	mem[n] = fibRecur(n - 1) + fibRecur(n - 2);
+	mem[n] = fibMem(n - 1, mem) + fibMem(n - 2, mem);
 	return mem[n];
 };
 
