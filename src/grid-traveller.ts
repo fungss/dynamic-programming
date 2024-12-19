@@ -22,19 +22,14 @@ Time complexity reduces from O(2 ^ (m + n)) to O(m + n).
 Space complexity remains unchanged.
 As a result, time required for gridTraveler(18,18) reduces from 37641 ms to 1 ms
 */
-const gridTravelerMem = (
-	m: number,
-	n: number,
-	mem: { [key: string]: number } = {}
-): number => {
+const gridTravelerMem = (m: number, n: number, mem: { [key: string]: number } = {}): number => {
 	const key: string = m + "," + n;
 	const key_recipical: string = n + "," + m;
 	if (key in mem) return mem[key];
 	if (key_recipical in mem) return mem[key_recipical];
 	if (m === 0 || n === 0) return 0;
 	if (m === 1 && n === 1) return 1;
-	const result: number =
-		gridTravelerMem(m - 1, n, mem) + gridTravelerMem(m, n - 1, mem);
+	const result: number = gridTravelerMem(m - 1, n, mem) + gridTravelerMem(m, n - 1, mem);
 	mem[key] = result;
 	mem[key_recipical] = result;
 	return mem[key];
