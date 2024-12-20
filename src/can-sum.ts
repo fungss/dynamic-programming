@@ -17,6 +17,17 @@ const canSum = (targetSum: number, numbers: number[]): boolean => {
 	return false;
 };
 
+/*
+Before memoization
+1. Time complexity
+For each level, there are at most n branches for the nodes.
+Tree height is m, max number of times targetSum can be subtracted by any of the n numbers.
+So the time complexity of the problem is exponential, O(n^m).
+
+2. Space complexity
+At most m calls can be handled in stack, so polynomial, O(m).
+*/
+
 const canSumMem = (targetSum: number, numbers: number[], mem: { [idx: number]: boolean } = {}): boolean => {
 	if (targetSum in mem) return mem[targetSum];
 	if (targetSum == 0) return true;
@@ -35,7 +46,24 @@ const canSumMem = (targetSum: number, numbers: number[], mem: { [idx: number]: b
 	return false;
 };
 
+/*
+After memoization
+1. Time complexity
+Since results are cached, only at most m * n possible calculations remain. So time complexity is reduced to O(m * n).
+
+2. Space complexity remains the same.
+*/
+
 module.exports = {
 	canSum,
 	canSumMem,
 };
+
+/*
+Side notes
+foreach loop is not used in the above because it discards return values.
+
+Reference
+1. Array.prototype.forEach()
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+*/
