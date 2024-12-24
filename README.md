@@ -35,7 +35,7 @@ npm test
 -   [ ] 14. canConstruct tabulation
 -   [ ] 15. allConstruct tabulation
 
-**Some more dp**
+**Some more dynamic programming**
 
 1. [Mastering Dynamic Programming - How to solve any interview problem (Part 1)](https://www.youtube.com/watch?v=Hdr64lKQ3e4)
 2. [Mastering Dynamic Programming - A Real-Life Problem (Part 2)](https://www.youtube.com/watch?v=rE5h11FwiVw)
