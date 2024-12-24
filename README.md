@@ -3,7 +3,7 @@
 Solutions to [Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges](https://youtu.be/oBt53YbR9Kk?si=gQ3oz01wwZQWSsr_). </br>
 Written in a dockerized typescript environment, following TDD methodology.
 
-**Instruction**
+**Steps**
 
 To spin up the container
 
