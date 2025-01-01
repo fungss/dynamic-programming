@@ -4,14 +4,12 @@ const how_sum = require("../src/how-sum.ts");
 test("howSum(7, [2, 3]) returns result that can sum up to 7", () => {
 	const targetSum: number = 7;
 	const resultList: number[] = how_sum.howSum(7, [2, 3]);
-	console.log(resultList);
 	expect(resultList.reduce((total: number, element: number) => total + element)).toBe(targetSum);
 });
 
 test("howSum(7, [5, 3, 4, 7]) returns result that can sum up to 7", () => {
 	const targetSum: number = 7;
 	const resultList: number[] = how_sum.howSum(7, [5, 3, 4, 7]);
-	console.log(resultList);
 	expect(resultList.reduce((total: number, element: number) => total + element)).toBe(targetSum);
 });
 

@@ -1,6 +1,6 @@
 ## Dynamic Programming
 
-Solutions to [Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges](https://youtu.be/oBt53YbR9Kk?si=gQ3oz01wwZQWSsr_). </br>
+Solutions to [Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges](https://www.youtube.com/watch?v=oBt53YbR9Kk). </br>
 Written in a dockerized typescript environment, following TDD methodology.
 
 **Steps**
@@ -23,7 +23,7 @@ npm test
 -   [x] 2. gridTraveller memoization
 -   [x] 3. canSum memoization
 -   [x] 4. howSum memoization
--   [ ] 5. bestSum memoization
+-   [x] 5. bestSum memoization
 -   [ ] 6. canConstruct memoization
 -   [ ] 7. countConstruct memoization
 -   [ ] 8. allConstruct memoization
