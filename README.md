@@ -24,7 +24,7 @@ npm test
 -   [x] 3. canSum memoization
 -   [x] 4. howSum memoization
 -   [x] 5. bestSum memoization
--   [ ] 6. canConstruct memoization
+-   [x] 6. canConstruct memoization
 -   [ ] 7. countConstruct memoization
 -   [ ] 8. allConstruct memoization
 -   [ ] 9. fib tabulation
