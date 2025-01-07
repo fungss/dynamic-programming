@@ -5,6 +5,7 @@ The func shd return a boolean indicating whether or not the target can be constr
 by concatenating elements of the workbank array.
 Elements of wordBank are reusable.
 */
+
 const canConstruct = (target: string, wordBank: Array<string>): boolean => {
 	if (target.length === 0) return true;
 

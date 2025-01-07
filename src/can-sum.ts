@@ -1,9 +1,11 @@
-/* Problem Statement
-Write a func `canSum(targetSum, nubmers)` that takes a targetSum and an array of numbers as arguments.
-The func shd return a bool indicating whethere or not it is possible to generate the targetSum using numbers from the array.
-You may use an element of the array as many times as needed.
-You may assume that all input numbers are nonnegative.
+/* 
+[Problem Statement]
+Write a func `canSum(targetSum, nubmers)` that takes a targetSum and an array of numbers as arguments
+The func shd return a bool indicating whethere or not it is possible to generate the targetSum using numbers from the array
+You may use an element of the array as many times as needed
+You may assume that all input numbers are nonnegative
 */
+
 const canSum = (targetSum: number, numbers: number[]): boolean => {
 	if (targetSum == 0) return true;
 	if (targetSum < 0) return false;
@@ -18,14 +20,13 @@ const canSum = (targetSum: number, numbers: number[]): boolean => {
 };
 
 /*
-Before memoization
-1. Time complexity
-For each level, there are at most n branches for the nodes.
-Tree height is m, max number of times targetSum can be subtracted by any of the n numbers.
-So the time complexity of the problem is exponential, O(n^m).
+[Time complexity]
+For each level, there are at most n branches for the nodes
+Tree height is m, max number of times targetSum can be subtracted by any of the n numbers
+So the time complexity of the problem is exponential, O(n^m)
 
-2. Space complexity
-At most m calls can be handled in stack, so polynomial, O(m).
+[Space complexity]
+At most m calls can be handled in stack, so polynomial, O(m)
 */
 
 const canSumMem = (targetSum: number, numbers: number[], mem: { [idx: number]: boolean } = {}): boolean => {
@@ -47,11 +48,11 @@ const canSumMem = (targetSum: number, numbers: number[], mem: { [idx: number]: b
 };
 
 /*
-After memoization
-1. Time complexity
-Since results are cached, only at most m * n possible calculations remain. So time complexity is reduced to O(m * n).
+[Time complexity]
+Since results are cached, only at most m * n possible calculations remain. So time complexity is reduced to O(m * n)
 
-2. Space complexity remains the same.
+[Space complexity]
+remains the same
 */
 
 module.exports = {
