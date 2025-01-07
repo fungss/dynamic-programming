@@ -1,9 +1,11 @@
-/* Problem Statement
+/* 
+[Problem Statement]
 Write a func `howSum(targetSum, nubmers)` that takes a targetSum and an array of numbers as arguments.
 The func shd return an array containing ANY combination of elements that add up to targetSum.
 Return null if combination not found.
 Return ANY single one if multiple combinations avaialble.
 */
+
 const howSum = (targetSum: number, numbers: number[]): number[] | null => {
 	if (targetSum == 0) return [];
 	if (targetSum < 0) return null;
@@ -20,7 +22,7 @@ const howSum = (targetSum: number, numbers: number[]): number[] | null => {
 };
 
 /*
-Time complexity
+[Time complexity]
 From canSum,
 total number of leaves = tot num of func calls = 1 + 1 * n + 1 * n^2 + ... 1 * n^(m+1) 
 -> (n^(m+1) - 1)/n-1 (geometric sum) 
@@ -30,7 +32,7 @@ Since for each func calls, howSum has an extra step that is taking linear time, 
 at worst copying m elements from the returned values of its sub-calls
 -> Big-O becomes O(n^m * m).
 
-Space complexity
+[Space complexity]
 Even tho additional space is required for the array, 
 there are only 2 arrays at most with longest length of m <=> constant term at worst.
 So remains as O(m).
@@ -58,10 +60,11 @@ const howSumMem = (
 	return null;
 };
 
-/* With memoization
-Time - Same as canSumMem but with an additional step to copy array -> O(n*m * m) <=> O (n*m^2).
+/*
+[Time complexity]
+Same as canSumMem but with an additional step to copy array -> O(n*m * m) <=> O (n*m^2).
 
-Space
+[Space complexity]
 Dominant term changes from the at-most m function calls to
 the cache as the cached values are at-most up to m elements.
 Give there can be m keys, the space of the cache object is m * m = m^2.
