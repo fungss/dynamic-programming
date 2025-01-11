@@ -23,7 +23,9 @@ const howSum = (targetSum: number, numbers: number[]): number[] | null => {
 
 /*
 [Time complexity]
-From canSum,
+Given 
+height m = target.length
+breadth n = wordBank.length
 total number of leaves = tot num of func calls = 1 + 1 * n + 1 * n^2 + ... 1 * n^(m+1) 
 -> (n^(m+1) - 1)/n-1 (geometric sum) 
 -> focus on dominant term and ignore constant factors

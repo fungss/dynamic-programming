@@ -16,15 +16,16 @@ const canConstruct = (target: string, wordBank: Array<string>): boolean => {
 			if (result === true) return result;
 		}
 	}
+
 	return false;
 };
 
 /*
 [Time complexity]
 Given 
-level m = wordBank.length 
-height n = target.legnth
-Considering the worst case, for each func call, there are m number of edges
+height m = target.length
+breadth n = wordBank.length 
+Considering the worst case, for each func call, there are n number of edges
 So total number of calls = (n^(m+1) - 1)/n-1 (geometric sum) ~ n^m (ignoring constant term, exponential)
 For each call there are two operations,
 1) target.includes(word) - O(n), linearly search thru target
@@ -52,6 +53,7 @@ const canConstructMem = (target: string, wordBank: string[], mem: { [idx: string
 			}
 		}
 	}
+
 	mem[target] = false;
 	return false;
 };
@@ -62,8 +64,8 @@ Total number of func calls shrinks to ~ n * m with memoization.
 Taking the additional operations into account, time complexity becomes O(n*m * m) <=> O(n * m^2)
 
 [Space complexity]
-The mem object has m keys at worst, and for each m, there are 2 possible values (true or false).
-Comparing this term against the space required from the calls, 2m < m^2 asymptotically
+The mem object has m key-value pairs at worst ({string: boolean})
+Comparing this term against the space required from the calls, m < m^2 asymptotically
 So space complexity remains as O(m^2)
 */
 
