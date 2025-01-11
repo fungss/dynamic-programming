@@ -10,7 +10,7 @@ const canConstruct = (target: string, wordBank: Array<string>): boolean => {
 	if (target.length === 0) return true;
 
 	for (const word of wordBank) {
-		if (target.includes(word) === true) {
+		if (target.startsWith(word) === true) {
 			const subTarget: string = target.replace(word, "");
 			const result: boolean = canConstruct(subTarget, wordBank);
 			if (result === true) return result;
@@ -43,7 +43,7 @@ const canConstructMem = (target: string, wordBank: string[], mem: { [idx: string
 	if (target.length === 0) return true;
 
 	for (const word of wordBank) {
-		if (target.includes(word) === true) {
+		if (target.startsWith(word) === true) {
 			const subTarget: string = target.replace(word, "");
 			const result: boolean = canConstructMem(subTarget, wordBank, mem);
 			if (result === true) {
