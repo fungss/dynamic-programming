@@ -7,7 +7,7 @@ const gridTravelerRecur = (m: number, n: number): number => {
 /* 
 [Time Complexity]
 From starting node, only move left or down in every move.
-Since no diagonal move, distance from starting node (m,n) to target node (1,1) is a Manhattan distance.
+Since no diagonal move, distance from starting node (m,n) to target node (1,1), is of Manhattan distance.
 Time complexity = number of function calls made = # of nodes in the binary tree.
 The level of the tree is m + n - 2.
 For each level, there are 2 function calls -> Time complexity is O(2 ^ level of tree) = O(2 ^ (m + n)).
