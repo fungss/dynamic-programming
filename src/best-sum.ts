@@ -27,10 +27,19 @@ const bestSum = (targetSum: number, numbers: number[]): number[] | null => {
 
 /*
 [Time complexity]
-Since arr.length is O(1), Big-O of bestSum is the same as howSum -> O(n^m * m)
+Since arr.length is O(1), Big-O of bestSum is the same as howSum
+so
+Given 
+height m = target.length
+breadth n = wordBank.length
+Number of total func calls same as canConstruct <=> n^m (geometric sum)
+For each func call, copying m elements at worst -> m number of operations
+-> O(n^m * m), exponential
 
 [Space complexity]
-At any given point of time, there are at most m calls in the stack and for each call it will be storing, at worst, an array of length m, 
+At any given point of time, there are at most m calls in the stack and 
+for each call, 
+it will be storing an array of length m at worst
 -> O(m * m) <=> O(m^2)
 */
 
@@ -61,7 +70,8 @@ const bestSumMem = (
 
 /*
 [Time complexity]
-Memoization shrinks the number of max possible calculations to n * m and for each call there is a copy of array that takes m steps
+Memoization shrinks the number of max possible calculations to n * m and 
+for each call there is a copy of array that takes m steps
 -> O(n*m * m) <=> O(n * m^2)
 
 [Space complexity]

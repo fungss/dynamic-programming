@@ -21,6 +21,9 @@ const canSum = (targetSum: number, numbers: number[]): boolean => {
 
 /*
 [Time complexity]
+Given 
+height m = target.length
+breadth n = wordBank.length 
 For each level, there are at most n branches for the nodes
 Tree height is m, max number of times targetSum can be subtracted by any of the n numbers
 So the time complexity of the problem is exponential, O(n^m)
