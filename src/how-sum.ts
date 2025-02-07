@@ -70,7 +70,7 @@ Same as canSumMem but with an additional step to copy array -> O(n*m * m) <=> O 
 Dominant term changes from the at-most m function calls to
 the cache as the cached values are at-most up to m elements.
 Give there can be m keys, the space of the cache object is m * m = m^2.
-So space complexity becomes O(m^2).
+So space complexity becomes O(m ^ 2).
 */
 
 module.exports = {

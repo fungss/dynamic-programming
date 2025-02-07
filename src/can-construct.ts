@@ -36,7 +36,7 @@ As a result, time complexity is O(n^m * m)
 [Space complexity]
 At any point of time during the execution, there are at most m number of calls
 And for each call, there will be an array storing m elements at worst
-So space complexity is O(m^2)
+So space complexity is O(m ^ 2)
 */
 
 const canConstructMem = (target: string, wordBank: string[], mem: { [idx: string]: boolean } = {}): boolean => {
@@ -66,7 +66,7 @@ Taking the additional operations into account, time complexity becomes O(n*m * m
 [Space complexity]
 The mem object has m key-value pairs at worst ({string: boolean})
 Comparing this term against the space required from the calls, m < m^2 asymptotically
-So space complexity remains as O(m^2)
+So space complexity remains as O(m ^ 2)
 */
 
 module.exports = {
