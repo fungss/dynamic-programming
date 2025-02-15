@@ -22,7 +22,7 @@ const canSumTab = (targetSum: number, numbers: number[]): boolean => {
 };
 
 /*
-[Tabulation steps]
+[Tabulation recipe]
 1. size of table
 an array of length === targetSum, coz it's shrinkable thru iteration
 2. value at init
