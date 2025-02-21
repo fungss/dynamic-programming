@@ -31,7 +31,7 @@ npm test
 -   [x] 10. gridTraveller tabulation
 -   [x] 11. canSum tabulation
 -   [x] 12. howSum tabulation
--   [ ] 13. bestSum tabulation
+-   [x] 13. bestSum tabulation
 -   [ ] 14. canConstruct tabulation
 -   [ ] 15. allConstruct tabulation
 
