@@ -5,13 +5,9 @@ Written in a dockerized typescript environment, following TDD methodology.
 
 **Steps**
 
-To spin up the container
+With Dev Containers installed (vscode plugin) -> reopen in container
 
-```
-docker compose up -d --build
-```
-
-After attaching the running container to vscode, to run all the tests
+To run all the tests
 
 ```
 npm test

@@ -51,6 +51,8 @@ so -> O(m)
 (sliced copy is only a local varialbe and does not accumulate over time)
 */
 
+canConstructTab("enterapotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"])
+
 module.exports = {
 	canConstructTab
 };
