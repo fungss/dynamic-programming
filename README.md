@@ -32,8 +32,9 @@ npm test
 -   [x] 11. canSum tabulation
 -   [x] 12. howSum tabulation
 -   [x] 13. bestSum tabulation
--   [ ] 14. canConstruct tabulation
--   [ ] 15. allConstruct tabulation
+-   [x] 14. canConstruct tabulation
+-   [ ] 15. countConstruct tabulation
+-   [ ] 16. allConstruct tabulation
 
 **Some more dynamic programming**
 
