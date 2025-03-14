@@ -85,9 +85,54 @@ TODO: TBC
 
 */
 
+const allConstructTab = (target: string, wordBank: Array<string>): string[][] => {
+    const table: string[][][] = Array(target.length+1).fill(null).map(() => []);
+	table[0] = [[]];
+
+	for (let i = 0; i < table.length; i++) {
+		if (table[i].length !== [].length) {
+			for (const word of wordBank) {
+				if (i + word.length < table.length) {
+					if (target.slice(i, i+word.length) === word) {
+						for (const comb of table[i]) {
+							table[i + word.length].push([... comb, word]);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	return table[target.length];
+};
+
+/*
+[Tabulation recipe]
+1. size of table
+an array of length === target, coz it's shrinkable thru iteration
+2. value at init
+problem asking for string[][] -> so []
+3. trivial answer
+table[0] to represent '' -> [[]] 
+4. logic to interate thru the array
+as i increases, 
+consider the NEXT word.length chars (so i + word.length), and 
+check if the slice matches the word, for word in wordBank 
+-> if true, push [... comb, word] to table[i + word.length] for each comb in table[i]
+return table[target.length];
+
+[Time complexity]
+TODO: TBC
+
+[Space complexity]
+TODO: TBC
+
+*/
+
 module.exports = {
 	allConstruct,
 	allConstructMem,
+	allConstructTab,
 };
 
 /*
@@ -95,4 +140,6 @@ module.exports = {
 1. can (decision problem) -> how (combinatoric problem) -> best (optimisation problem)
 2. true worst case is not allConstructMem('eeeeeeeeeeeeeeeeeeeeeef', ['e', 'ee', 'eee', 'eeee', 'eeeee']) but
 allConstructMem('eeeeeeeeeeeeeeeeeeeeee', ['e', 'ee', 'eee', 'eeee', 'eeeee'])
+3. Array(target.length+1).fill([]); would point (reference) the element of each index to the same array
+-> Array(target.length+1).fill(null).map(() => []); ensure they are referring to different arrays.
 */

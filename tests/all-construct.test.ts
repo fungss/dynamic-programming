@@ -28,3 +28,26 @@ test("allConstructMem('eeeeeeeeeeeeeeeeeeeeeef', ['e', 'ee', 'eee', 'eeee', 'eee
 	const expectedArray: Array<Array<string>> = [];
 	expect(all_construct.allConstructMem("eeeeeeeeeeeeeeeeeeeeeef", ["e", "ee", "eee", "eeee", "eeeee"])).toEqual(expectedArray);
 });
+
+test("allConstructTab('abcdef', ['ab', 'abc', 'cd', 'def', 'abcd', 'ef', 'c'])", () => {
+	const expectedArray: Array<Array<string>> = [
+		['ab', 'cd', 'ef'],
+		['ab', 'c', 'def'],
+		['abc', 'def'],
+		['abcd', 'ef']
+	];
+	expect(all_construct.allConstructTab('abcdef', ['ab', 'abc', 'cd', 'def', 'abcd', 'ef', 'c']).sort()).toEqual(expectedArray.sort());
+});
+
+test("allConstructTab('purple', ['purp', 'p', 'ur', 'le', 'purpl'])", () => {
+	const expectedArray: Array<Array<string>> = [
+		['purp', 'le'],
+		['p', 'ur', 'p', 'le']
+	];
+	expect(all_construct.allConstructTab('purple', ['purp', 'p', 'ur', 'le', 'purpl'])).toEqual(expectedArray);
+});
+
+test("allConstructTab('eeeeeeeeeeeeeeeeeeeeeef', ['e', 'ee', 'eee', 'eeee', 'eeeee'])", () => {
+	const expectedArray: Array<Array<string>> = [];
+	expect(all_construct.allConstructTab("eeeeeeeeeeeeeeeeeeeeeef", ["e", "ee", "eee", "eeee", "eeeee"])).toEqual(expectedArray);
+});

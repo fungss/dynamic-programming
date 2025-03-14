@@ -30,7 +30,7 @@ npm test
 -   [x] 13. bestSum tabulation
 -   [x] 14. canConstruct tabulation
 -   [x] 15. countConstruct tabulation
--   [ ] 16. allConstruct tabulation
+-   [x] 16. allConstruct tabulation
 
 **Some more dynamic programming**
 
