@@ -16,3 +16,15 @@ test("canConstruct('eeeeeeeeeeeeeeeeeeeeeef', ['e', 'ee', 'eee', 'eeee', 'eeeee'
 test("canConstructMem('eeeeeeeeeeeeeeeeeeeeeef', ['e', 'ee', 'eee', 'eeee', 'eeeee']) === false", () => {
 	expect(can_construct.canConstructMem("eeeeeeeeeeeeeeeeeeeeeef", ["e", "ee", "eee", "eeee", "eeeee"])).toBe(false);
 });
+
+test("canConstructTab('abcdef', ['ab', 'abc', 'cd', 'def', 'abcd']) === true", () => {
+	expect(can_construct.canConstructTab("abcdef", ["ab", "abc", "cd", "def", "abcd"])).toBe(true);
+});
+
+test("canConstructTab('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't']) === true", () => {
+	expect(can_construct.canConstructTab("enterapotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"])).toBe(true);
+});
+
+test("canConstructTab('eeeeeeeeeeeeeeeeeeeeeef', ['e', 'ee', 'eee', 'eeee', 'eeeee']) === false", () => {
+	expect(can_construct.canConstructTab("eeeeeeeeeeeeeeeeeeeeeef", ["e", "ee", "eee", "eeee", "eeeee"])).toBe(false);
+});
